@@ -5,6 +5,16 @@
 // Tema 1 - Cadastro das cartas
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
 
+// Função para Calcular o PIB per Capita
+float calcularPIBperCapita(float PIB, int populacao) {
+    return (float) PIB / populacao;
+}
+ 
+// Função para Calcular a Densidade Populacional
+float calcularDensidade(int populacao, float area) {
+    return (float) populacao / area;
+}
+
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
   char C1estado[4], C1cidade[20], C1letra, C2estado[4], C2cidade[20], C2letra;
@@ -35,7 +45,7 @@ int main() {
 
   printf("Qual é o PIB da cidade da carta 1? ");
   scanf("%f", &C1PIB);
-
+  
   // CARTA 2
   printf("Digite a letra do Estado de 'A' a 'H' da carta 2: ");
   scanf(" %c", &C2letra);
@@ -70,6 +80,8 @@ int main() {
   printf("Área: %.2f km²\n", C1area);
   printf("PIB: %.2f bilhões de reais\n", C1PIB);
   printf("Número de Pontos Turísticos: %d\n", C1pontosTuristico);
+  printf("Densidade Populacional: %.2f hab/km²\n", calcularDensidade(C1populacao, C1area));
+  printf("PIB per Capita: %.2f reais\n", calcularPIBperCapita(C1PIB, C1populacao));
 
   // PRINTs DA CARTA 2
   printf("\nCarta 2\n");
@@ -80,7 +92,8 @@ int main() {
   printf("Área: %.2f km²\n", C2area);
   printf("PIB: %.2f bilhões de reais\n", C2PIB);
   printf("Número de Pontos Turísticos: %d\n", C2pontosTuristico);
+  printf("Densidade Populacional: %.2f hab/km²\n", calcularDensidade(C2populacao, C2area));
+  printf("PIB per Capita: %.2f reais\n", calcularPIBperCapita(C2PIB, C2populacao));
 
   return 0;
 } 
-
