@@ -29,7 +29,8 @@ void exibirComparacao(float C1densidade, float C2densidade, float C1area, float 
 
     double resultadoSoma = (somaC1 > somaC2) ? somaC1 : somaC2;
 
-    printf("\nComparação de Cartas:\n");
+    printf("\nComparação de Cartas: Carta %d Venceu\n",
+          (somaC1 > somaC2) ? 1 : 2);
     printf("População: Carta %d venceu\n",
            (C1populacao > C2populacao) ? 1 : 2);
     printf("Área: Carta %d venceu\n",
