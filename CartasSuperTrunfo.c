@@ -21,13 +21,13 @@ void exibirComparacao(float C1densidade, float C2densidade, float C1area, float 
     int C1populacao, int C2populacao, int C1pontosTuristico, int C2pontosTuristico)
     {
     
-    float somaC1 = C1populacao + C1area + C1PIB +
+    double somaC1 = C1populacao + C1area + C1PIB +
                C1pontosTuristico + C1densidade + C1perCapita;
 
-    float somaC2 = C2populacao + C2area + C2PIB +
+    double somaC2 = C2populacao + C2area + C2PIB +
                 C2pontosTuristico + C2densidade + C2perCapita;
 
-    float resultadoSoma = (somaC1 > somaC2) ? somaC1 : somaC2;
+    double resultadoSoma = (somaC1 > somaC2) ? somaC1 : somaC2;
 
     printf("\nComparação de Cartas:\n");
     printf("População: Carta %d venceu\n",
@@ -42,7 +42,7 @@ void exibirComparacao(float C1densidade, float C2densidade, float C1area, float 
            (C1densidade < C2densidade) ? 1 : 2);
     printf("PIB per Capita: Carta %d venceu\n",
            (C1perCapita > C2perCapita) ? 1 : 2);
-    printf("Super Poder: %.2f, carta %d venceu\n", resultadoSoma, 
+    printf("Super Poder: %.f, carta %d venceu\n", resultadoSoma, 
            (somaC1 > somaC2) ? 1 : 2);
 }
 
