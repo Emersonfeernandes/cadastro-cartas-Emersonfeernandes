@@ -49,7 +49,8 @@ void exibirComparacao(float C1densidade, float C2densidade, float C1area, float 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
   char C1estado[4], C1cidade[20], C1letra, C2estado[4], C2cidade[20], C2letra;
-  unsigned int C1populacao, C1pontosTuristico, C2populacao, C2pontosTuristico;
+  int C1pontosTuristico, C2pontosTuristico;
+  unsigned long int C1populacao, C2populacao;
   float C1area, C1PIB, C2area, C2PIB, C1perCapita, C2perCapita, C1densidade, C2densidade; 
   
   // Área para entrada de dados
